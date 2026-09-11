@@ -1,0 +1,18 @@
+network:
+  version: 2
+  ethernets:
+    ens18:
+      dhcp4: true
+    ens19:
+      addresses:
+        - 10.33.199.98/29
+      routes:
+        - to: default
+          via: 10.33.199.97
+          metric: 200
+      nameservers:
+        addresses:
+          - 127.0.0.1
+          - 8.8.8.8
+        search:
+          - nodosur.local
